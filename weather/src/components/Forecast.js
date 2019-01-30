@@ -19,15 +19,13 @@ class Forecast extends React.Component{
         let split = date.split(" ");
         let mapper = split.map(val => val.split("-"));
         mapper.pop();
-        var date = mapper[0].map(n => parseInt(n, 10));
-        console.log(date)
-      
+        var date = mapper[0].map(n => parseInt(n, 10));     
         var day = date[2]
         var monthIndex = date[1];
         var year = date[0];
       
         return day + ' ' + monthNames[monthIndex-1] + ' ' + year;
-      }
+    }
     render(){
         return(
             <div>
